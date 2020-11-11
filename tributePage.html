@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+
+<!--Tribute Page Project
+    created by: Matthew S Johnson   -->
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rock Lee Tribute</title>
+        <style>
+            a{
+                color:rgb(0, 109, 44);
+                text-decoration: none;
+                font-style: italic;
+            }
+    
+            nav {
+                text-align: center;
+                background-color: #BABABA;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                box-shadow: 0px 0px 8px 0px  rgba(0,0,0,0.2);
+        
+            }
+    
+            nav h1{
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+    
+            nav h4{
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+    
+            body{
+                margin: 0px 0px 0px 0px;
+                background-color: #4E5259;
+            }
+    
+            footer {
+                text-align: center;
+                background-color: #BABABA;
+                padding-top: 5px;
+                padding-bottom: 2px; 
+                font-family: arial;
+                font-size: 12px;
+            }
+    
+            #img-div{
+                display: grid;
+                margin: 1vw 10vh 1vw 10vh;
+                background-color: transparent;
+                grid-template-columns: 60vw;
+                grid-template-rows: 75vh auto;
+                justify-content: center;
+                grid-gap: 10px;
+                grid-template-areas:
+                    "images"
+                    "caption";
+            }
+    
+            #main-figure-container-up{
+                grid-area: images;
+                display: grid;
+                font-size: 20px;
+                background: transparent;
+                grid-template-columns: 100%;
+                grid-template-rows: 25% 50% 25%;
+                grid-template-areas:
+                    "leftcorner"
+                    "mid"
+                    "rightcorner";
+    
+            }
+    
+            .image1{
+                grid-area: leftcorner;
+                border: 10px solid black;
+                border-radius: 30px;
+                justify-self: start;
+                align-self: start;
+                height: 10vw;
+                width: 10vw;
+                position: relative;
+                left: 5%;
+                top: 5%;
+                box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    
+    
+            }
+    
+            .image2{
+                grid-area: mid;
+                border: 10px solid rgb(47, 79, 60);
+                border-radius: 30px;
+                align-self: center;
+                justify-self: center;
+                width: 75%;
+                height: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+            }
+    
+            .image3{
+                grid-area: rightcorner;
+                border: 10px solid black;
+                border-radius: 30px;
+                justify-self: end;
+                align-self: end;
+                width: 10vw;
+                height: 10vw;
+                position: relative;
+                right: 5%;
+                bottom: 5%;
+                box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+            }
+    
+            #main-figure-container-down{
+                grid-area: caption;
+                background:rgb(47, 79, 60);
+                text-align: center;
+                color: #E3D9CE;
+                margin: 0px 15% 0px 15%;
+                padding: 0.5% 1% 0.5% 1%;
+                border-radius: 30px;
+                box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2), 2px 6px 20px 2px rgba(0,0,0,0.19);
+                font-family: arial;
+            }
+            
+            #tribute-info{
+                display: grid;
+                background-color: #BABABA;
+                margin: 1vh 10vw 1vh 10vw;
+                border: 3px solid rgb(65, 65, 65);
+                border-radius: 20px;
+                padding: 1%;
+                grid-gap: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(8, auto);
+                grid-template-areas:
+                    "about about about"
+                    "description description descriptionImage"
+                    "top5 top5 top5"
+                    "item1 item1 item1Image"
+                    "item2 item2 item2Image"
+                    "item3 item3 item3Image"
+                    "item4 item4 item4Image"
+                    "item5 item5 item5Image";
+    
+            }
+    
+            h1{
+                font-size: 36px;
+            }
+            h2{
+                text-align: center;
+                color: #E3D9CE;
+                background-color: rgb(47, 79, 60);
+                border-radius: 20px;
+                margin-top: 0px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 30px;
+            }
+    
+            .item1{
+                grid-area: about;
+    
+            }
+            
+            .item2{
+                grid-area: description;
+            }
+    
+            .item3{
+                grid-area: descriptionImage;
+    
+                
+            }
+    
+            .item4{
+                grid-area: top5;
+            }
+    
+            .item5{
+                grid-area: item1;
+            }
+    
+            .item6{
+                grid-area: item1Image;
+            }
+    
+            .item7{
+                grid-area: item2;
+            }
+    
+            .item8{
+                grid-area: item2Image;
+            }
+    
+            .item9{
+                grid-area: item3;
+            }
+    
+            .item10{
+                grid-area: item3Image;
+            }
+            .item11{
+                grid-area: item4;
+            }
+    
+            .item12{
+                grid-area: item4Image;
+            }
+            .item13{
+                grid-area: item5;
+            }
+            .item14{
+                grid-area: item5Image;
+            }
+            
+            .boxes{
+                
+                width: 100%;
+                height: 100%;
+    
+            }
+    
+            .picture{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5%;
+                width: 30vh;
+                height: 25vh;
+                border: 3px solid rgb(65, 65, 65);
+                border-radius: 20px;
+                
+            }
+    
+            .captions{
+                text-align: center;
+                font-family: arial;
+                font-size: 14px;
+                
+                
+            }
+    
+            .d-text{
+                color: black;
+                padding: 0px 1vw 0px 1vw;
+                font-family: verdana;
+                font-size: 16px;
+            }
+    
+    
+            @media(max-width: 800px){
+                #tribute-info{
+                display: grid;
+                background-color: #BABABA;
+                margin: 1vh 10vw 1vh 10vw;
+                border: 3px solid rgb(65, 65, 65);
+                border-radius: 20px;
+                padding: 0.5%;
+                grid-gap: 10px;
+                justify-items: center;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(14, auto);
+                grid-template-areas:
+                    "about"
+                    "descriptionImage"
+                    "description"
+                    "top5"
+                    "item1Image"
+                    "item1"
+                    "item2Image"
+                    "item2"
+                    "item3Image"
+                    "item3"
+                    "item4Image"
+                    "item4"
+                    "item5Image"
+                    "item5";
+                }
+                
+                .picture{
+                    width: 50vw;
+                    height: 40vw;
+                }
+                .boxes{
+                    width: 90%;
+                    padding: auto;
+                }
+                
+                .image1{
+                    top: 50%;
+                    left: 1vw;
+                    width: 10vh;
+                    height: 10vh;
+                }
+                .image2{
+                    width: 85%;
+                    height: 60%;
+                }
+                .image3{
+                    bottom: 50%;
+                    right: 1vw;
+                    width: 10vh;
+                    height: 10vh;
+                }
+
+            }
+    
+        </style>
+    </head>
+    
+    <body id="main">
+        <nav>
+            <h1 id="title" style="margin-top: 0px;">Rock Lee</h1>
+            <h4>Taijutsu Master</h4>
+        </nav>
+        <div id="img-div">
+            <div id="main-figure-container-up">
+                <img id="image" class="image1" src="https://i.pinimg.com/originals/f7/a3/c2/f7a3c26e38d54081c6090b7123e56203.jpg">
+                <img class="image2" src="https://static.zerochan.net/Rock.Lee.full.2215944.jpg">
+                <img class="image3" src="https://pngimage.net/wp-content/uploads/2019/05/naruto-wind-symbol-png-2.png">
+            </div>
+            <div id="main-figure-container-down">
+                <p id="img-caption">Rock Lee fan art showcasing his taijutsu prowess</p>
+            </div>
+        </div>
+        <div id="tribute-info">
+            <div class="item1 boxes"><h2>About Rock Lee</h2></div>
+            <div class="item2 boxes d-text">
+                <p><b>The Man, The Myth, The Legend - </b>As a shinobi of the Lee clan from Konohagakure, Rock Lee was one of the more interesting characters
+                    to be introduced within the Naruto world. We are first shown his skills when he decides to challenge
+                    Sasuke to a fight before the chunin exam. It is then that his prowess in taijutsu is first 
+                    displayed. As the story progressed forwarded, it is shown that Rock Lee's refined taijutsu 
+                    skill is made to compensate for his inability to perform genjutsu or ninjutsu. As one of the
+                    few shinobi in the Hidden Leaf Village that can't perform genjutsu or ninjutsu, Lee is mocked
+                    as he goes through schooling. Despite this, Lee becomes determined to prove that he can 
+                    be a splendid shinobi. His pure determination and work ethic become his defining characteristics
+                    throughout the anime. 
+                </p>
+            </div>
+            <div class="item3 boxes">
+                <img class="picture" src="https://www.desktopbackground.org/download/o/2011/09/23/270306_naruto-shippuden-rock-lee-wallpapers_1920x1080_h.jpg">
+                <p class="captions">Lee opening the inner gates</p>
+            </div>
+            <div class="item4 boxes"><h2>Top 5 Rock Lee Episodes</h2></div>
+            <div class="item5 boxes d-text">
+                <p><b>1) Lee vs. Gaara - </b>The episode that Lee and Gaara fight is easily one of his most iconic. This is where we get 
+                    to see what this shinobi is truly capable of. Despite his inability to perform 
+                    ninjutsu or genjutsu, Lee heads into the battle head first and without hesitation.
+                    Obviously, the coolest moment of this fight is when Lee finally takes off his ankle 
+                    weights. As he does this, what seemed like normal weights, prove to be amazingly heavy
+                    as they cause a small explosion as they hit the ground. With the weights off, Lee's 
+                    speed increases exponentially. Through sheer physical ability, Lee is able to land
+                    a blow on Gaara. This scene is made more amazing considering that Gaara is know to 
+                    have the unbreakable defense of Shukaku the one-tailed beast within him.
+                </p>
+            </div>
+            <div class="item6 boxes">
+                <img class="picture" src="https://www.inwhatepisode.tv/wp-content/uploads/2013/11/Rock-lee-punches-Gaara.png">
+                <p class="captions">Lee landing a hit on Gaara (<a target="_blank" href="https://www.crunchyroll.com/naruto/episode-48-gaara-vs-rock-lee-the-power-of-youth-explodes-520376#:~:text=Episode%2048%20Gaara%20vs.,Hidden%20Strength%3A%20Forbidden%20Secret%20Jutsu!">Episode 48</a>)</p>
+            </div>
+            <div class="item7 boxes d-text">
+                <p><b>2) First Appearance - </b>Rock Lee is first introduced to Team Kakashi right before the Chunin exams begin. 
+                    This is an important point in shinobi life, as young genin are attempting to 
+                    move up in the ranks and become Chunin ranked ninja. Lee's humorous character 
+                    design is shown as he professes his love for Sakura. This leads him to trying
+                    to display his taijutsu dominance by challenging Sasuke. Up to this point, 
+                    Sasuke is depicted as a formidable shinobi of the Uchiha Clan possessing the 
+                    sharingan eyes. With these eyes, Sasuke's fighting ability is heightened and 
+                    can even imitate some opponent's jutsu. This is where we learn that Rock Lee
+                    fights purely based on taijutsu. In the fight Lee gains the upperhand until
+                    he is quickly stopped by Guy Sensei.
+                </p>
+            </div>
+            <div class="item8 boxes">
+                <img class="picture" src="https://vignette4.wikia.nocookie.net/naruto/images/2/22/O_Desafio_Ch%C5%ABnin_Rock_Lee_vs._Sasuke%21.png/revision/latest?cb=20150818013428&path-prefix=pt-br">
+                <p class="captions">Lee fighting Sasuke (<a target="_blank" href="https://www.crunchyroll.com/naruto/episode-22-chnin-challenge-rock-lee-vs-sasuke-520322#:~:text=Sasuke!,-Play%20on%20Chromecast">Episode 22</a>)</p>
+            </div>
+            <div class="item9 boxes d-text">
+                <p><b>3) Drunken Fist Prodigy - </b>Lee's fight with Kimimaro is probably one of the most important and funniest 
+                    fights that he has throughout Naruto. This fight is incredibly crucial as 
+                    it is part of one of the major arcs in the show. In this arc, Naruto, Shikamaru
+                    and others are chasing after Orochimaru's Sound Four. The reason that this 
+                    is so important is because they are attempting to kidnap Sasuke and bring
+                    him to Orochimaru. Later we find out that Orochimaru's intention is to 
+                    get rid of his dying body and take control of Sasuke's. During the pursuit,
+                    members of Naruto's party are split off to take on the Sound Four members in 
+                    individual battles. Because the Sound Four members were taking to long to 
+                    return with Sasuke, Kimimaro decides to step in and fight. In order to allow
+                    Naruto to continue after Sasuke, Lee decides to fight as well. Kimimaro is 
+                    shown to be a frightening opponent as he possesses a rare kekkei genkai that 
+                    gives him full control of his bones that he he can create, make dense, and use 
+                    as weapons. An important thing to note, is that at this point in the show, 
+                    Lee is still recovering from his battle from Gaara where it was thought that 
+                    he would never fight again. This is why we are fortunately able to see 
+                    Lee's true skill, the drunken fist. After taking his "medicine" Lee's fighting 
+                    becomes heightened, but also erratic. This hilarious fighting style proves 
+                    to be one of the strongest in the show in terms of taijutsu and even becomes 
+                    a fierce challenge for Kimimaro.
+                </p>
+            </div>
+            <div class="item10 boxes">
+                <img class="picture" src="https://64.media.tumblr.com/f8f9e9c129db034de4645e0fd50b1d20/tumblr_n72r6g11NQ1sktgg3o7_250.gifv">
+                <p class="captions">Lee fights Kimimaro (<a target="_blank" href="https://www.crunchyroll.com/naruto/episode-126-showdown-gaara-vs-kimimaro-520254">Episode 126</a>)</p>
+            </div>
+            <div class="item11 boxes d-text">
+                <p><b>4) Student vs. Master - </b>During the third great beast arc we finally see a serious battle between
+                    Guy and Lee. These two characters are easily the best taijutsu fighters
+                    in the entire show. They are even able to open the inner gates to heighten 
+                    their already amazing abilities. In this episode Lee and Guy are trapped
+                    in a makeshift temple made up of wood from dummy fighting partners that 
+                    are under the control of an enemy's jutsu. As the two fight their way up 
+                    the tower, they must continously fight these wooden dummies. Eventually,
+                    Guy and Lee unknowingly start to fight each other as the enemy's jutsu
+                    makes them look like wooden dummies to each other. Guy and Lee become 
+                    amazed by the dummy that they are fighting as they realize its awesome 
+                    taijutsu skill. The pair eventually realize that they are fighting each 
+                    other and decide that going all out is the only solution. In amazing 
+                    display of their talents, their sheer speed and force in their attacks 
+                    is too much for the jutsu to handle and they are eventually freed.
+                </p>
+            </div>
+            <div class="item12 boxes">
+                <img class="picture" src="https://vignette.wikia.nocookie.net/naruto/images/a/a7/Episode_196.png/revision/latest?cb=20150626143039">
+                <p class="captions">Lee fighting Guy during the 3rd Great Beast Arc (<a target="_blank" href="https://www.crunchyroll.com/naruto/episode-196-hot-blooded-confrontation-student-vs-sensei-534356">Episode 196</a>)</p>
+            </div>
+            <div class="item13 boxes d-text">
+                <p><b>5) Challenger Wanted - </b>In one of the more light-hearted episodes, Lee builds a dojo so that 
+                    he can go to other dojos and challenge the students to taijutsu 
+                    fights. The purpose for this is to get stronger and prove that he 
+                    is the best taijutsu fighter around. Proud of his student, Guy 
+                    decides to disguise himself and challenge Lee in his dojo. Unfortunately,
+                    Guy gets sent off on a mission before he can. At the same time, a thief named Nanafushi
+                    shows up disguise as Guy and ends up getting forced to fight 
+                    Lee in his dojo. Eventually, the thief gets destroyed by Lee's 
+                    taijutsu and he is turned in to Tsunade.
+                </p>
+            </div>
+            <div class="item14 boxes">
+                <img class="picture" src="https://s1.narvii.com/image/emexrt6ttwps7u5et5uh5uhl7coqsq7u_hq.jpg">
+                <p class="captions">Lee accepting a challenger in his dojo (<a target="_blank" href="https://www.crunchyroll.com/naruto/episode-193-viva-dojo-challenge-youth-is-all-about-passion-534350">Episode 193</a>)</p>
+            </div>
+        </div>
+    
+        <footer>
+            <p>Page created by Matthew Johnson 2020</p>
+            <p>For more information check this <a id="tribute-link" target="_blank" href="https://naruto.fandom.com/wiki/Rock_Lee">wiki</a></p>
+        </footer>
+    
+    </body>
+    </html>
